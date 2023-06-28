@@ -5,25 +5,29 @@
     <title>Leaderboard</title>
 </head>
 <body>
+  <h1>Leaderboard</h1>
   <section id="main-container">
-    <h1>Leaderboard</h1>
-    <div id="recent-scores-container">
-        <div>
+    <div id="container-scores">
+      <div id="recent-scores-container">
+        <div id="title-scores">
           <h4>Recent scores</h4>
-          <button>Refresh</button>
+          <button id="refresh">Refresh</button>
         </div>
         <ul id="scores-list">
           
         </ul>
+      </div>
+      <div id="form-container">
+        <div id="title-form">
+          <h4>Add your score</h4>
+        </div>
+        <form id="form-add">
+          <input type="text" class="name-input" placeholder="Your name">
+          <input type="text" class="score" placeholder="Your score">
+          <button class="submit">Submit</button>
+        </form>
+      </div>
     </div>
-    <div>
-      <h4>Add your score</h4>
-    </div>
-    <form class="adds">
-      <input type="text" class="name" placeholder="Your name">
-      <input type="text" class="score" placeholder="Your score">
-      <button class="submit">Submit</button>
-    </form>
   </section>
 </body>
 <footer></footer>
