@@ -4,7 +4,6 @@
 }
 
 #main-container {
-  height: 70vh;
   display: flex;
   justify-content: center;
 }
@@ -122,5 +121,6 @@ h1 {
 footer {
   border: 1px solid black;
   height: 115px;
+  margin-top: 90px;
   background-color: rgb(213, 213, 213);
 }
