@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+}
+
+#container-scores {
+  display: flex;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 85px;
+  margin-left: 125px;
+  margin-top: 55px;
+}
+
+#title-scores {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 55px;
+  margin-top: 55px;
+  display: flex;
+}
+
+#refresh {
+  margin-left: 150px;
+  margin-top: 15px;
+  padding: 1px 15px 5px 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  width: 155px;
+  height: 45px;
+}
+
+#scores-list {
+  margin-top: 25px;
+  list-style: none;
+  width: 680px;
+  border: 2px solid black;
+}
+
+.score-item {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  display: flex;
+  padding: 15px;
+  border: 1px solid black;
+}
+
+#form-container {
+  display: block;
+  margin-left: 65px;
+}
+
+#title-form {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 55px;
+  margin-left: 95px;
+  margin-top: 55px;
+  display: flex;
+}
+
+#form-add {
+  margin-top: 25px;
+  width: 420px;
+}
+
+.name-input {
+  width: 390px;
+  display: block;
+  margin-left: 95px;
+  padding: 15px;
+  border: 2px solid black;
+  margin-bottom: 40px;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 20px;
+}
+
+.name-input::placeholder {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 20px;
+}
+
+.score {
+  width: 390px;
+  display: block;
+  margin-left: 95px;
+  padding: 15px;
+  border: 2px solid black;
+  margin-bottom: 40px;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 20px;
+}
+
+.score::placeholder {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 20px;
+}
+
+.submit {
+  padding: 1px 15px 5px 15px;
+  font-family: 'Open Sans', sans-serif;
+  width: 155px;
+  height: 45px;
+  margin-left: 365px;
+  color: black;
+  font-size: 20px;
+}
+
+footer {
+  border: 1px solid black;
+  height: 115px;
+  margin-top: 90px;
+  background-color: rgb(213, 213, 213);
+}
