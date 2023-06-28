@@ -7,21 +7,18 @@ const score = document.querySelector('.score');
 const refresh = document.querySelector('#refresh');
 
 const postScore = () => {
-  const handleSubmit = (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    newGame(name.value, score.value);
+    await newGame(name.value, score.value);
     form.reset();
-  };
-
-  form.addEventListener('submit', handleSubmit);
+  });
 };
 
 const getScore = () => {
-  const handleClick = async () => {
-    await itemScore();
-  };
-
-  refresh.addEventListener('click', handleClick);
+  refresh.addEventListener('click', () => {
+    // Llamar a itemScore para obtener y agregar los puntajes
+    itemScore();
+  });
 };
 
 export { postScore, getScore };

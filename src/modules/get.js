@@ -4,17 +4,18 @@ const getInfo = async () => {
   try {
     const response = await fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
     });
 
     if (!response.ok) {
       throw new Error('Request failed');
     }
 
-    const data = await response.json();
-    return data.result;
+    response.result.sort((a, b) => b.score - a.score);
+  response.result.forEach((ele) => {
+    const list = document.createElement('li');
+    list.innerHTML = `<spam>${ele.user}</spam><spam>${ele.score}</spam>`;
+    listContainer.appendChild(list);
+  });
   } catch (error) {
     console.log('Error:', error);
     return null;

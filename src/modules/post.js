@@ -1,4 +1,4 @@
-import { url } from './api.js';
+import url from './api.js';
 
 const newGame = async (user, score) => {
   try {
@@ -17,7 +17,6 @@ const newGame = async (user, score) => {
     return data;
   } catch (error) {
     console.log('Error:', error);
-    return null;
   }
 };
 
