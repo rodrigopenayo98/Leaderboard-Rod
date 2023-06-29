@@ -1,6 +1,6 @@
-import { url } from './api.js';
+import url from './api.js';
 
-const getInfo = async () => {
+const getInfo = async () => { 
   try {
     const response = await fetch(url, {
       method: 'GET',
@@ -9,16 +9,11 @@ const getInfo = async () => {
     if (!response.ok) {
       throw new Error('Request failed');
     }
+    return await response.json();
 
-    response.result.sort((a, b) => b.score - a.score);
-  response.result.forEach((ele) => {
-    const list = document.createElement('li');
-    list.innerHTML = `<spam>${ele.user}</spam><spam>${ele.score}</spam>`;
-    listContainer.appendChild(list);
-  });
   } catch (error) {
     console.log('Error:', error);
-    return null;
+    return [];
   }
 };
 
