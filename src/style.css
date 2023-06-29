@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body {
+  background: rgb(36, 34, 195);
+  background: linear-gradient(347deg, rgba(36, 34, 195, 1) 0%, rgba(22, 255, 240, 1) 68%);
+}
+
 #main-container {
   display: flex;
   justify-content: center;
@@ -33,9 +38,17 @@ h1 {
   margin-top: 15px;
   padding: 1px 15px 5px 15px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   width: 155px;
   height: 45px;
+  background-color: #07417b;
+  color: #e8f8f5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#refresh:hover {
+  background-color: #085cb1;
 }
 
 #scores-list {
@@ -43,6 +56,12 @@ h1 {
   list-style: none;
   width: 680px;
   border: 2px solid black;
+  background-color: #e8f8f5;
+  border-radius: 25px;
+}
+
+#scores-list li.score-item:last-child {
+  border-bottom: none;
 }
 
 .score-item {
@@ -50,7 +69,7 @@ h1 {
   font-weight: 600;
   display: flex;
   padding: 15px;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 #form-container {
@@ -82,6 +101,7 @@ h1 {
   font-family: 'Open Sans', sans-serif;
   color: black;
   font-size: 20px;
+  border-radius: 15px;
 }
 
 .name-input::placeholder {
@@ -100,6 +120,7 @@ h1 {
   font-family: 'Open Sans', sans-serif;
   color: black;
   font-size: 20px;
+  border-radius: 15px;
 }
 
 .score::placeholder {
@@ -114,13 +135,20 @@ h1 {
   width: 155px;
   height: 45px;
   margin-left: 365px;
-  color: black;
-  font-size: 20px;
+  font-size: 22px;
+  background-color: #07417b;
+  color: #e8f8f5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #085cb1;
 }
 
 footer {
   border: 1px solid black;
-  height: 115px;
+  height: 135px;
   margin-top: 90px;
-  background-color: rgb(213, 213, 213);
+  background-color: #07417b;
 }
