@@ -8,16 +8,16 @@ const newGame = async (user, score) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        user: user,
-        score: score,
+        user,
+        score,
       }),
     });
 
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log('Error:', error);
+    return [];
   }
 };
 
-export { newGame };
+export default newGame;
