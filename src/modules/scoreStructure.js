@@ -1,17 +1,25 @@
-const itemScore = () => {
-  const scoreslist = document.querySelector('#scores-list');
-  scoreslist.classList.add('score-box');
-  scoreslist.innerHTML = `
-    <li class="score-item" id="1"><p class="name">Rod:</p><p>100</p></li>
-    <li class="score-item" id="2"><p class="name">Mason: </p><p> 99</p></li>
-    <li class="score-item" id="3"><p class="name">Martin: </p><p>20</p></li>
-    <li class="score-item" id="4"><p class="name">Hugo: </p><p>100</p></li>
-    <li class="score-item" id="5"><p class="name">Jadnael: </p><p>100</p></li>
-    <li class="score-item" id="6"><p class="name">Luis: </p><p>100</p></li>
-    <li class="score-item" id="7"><p class="name">Alfred: </p><p>100</p></li>
-    <li class="score-item" id="8"><p class="name">Gabriel: </p><p>100</p></li>
-    <li class="score-item" id="9"><p class="name">Gonzalo: </p><p>100</p></li>
-  `;
+const itemScore = (data) => {
+  const boardlist = document.querySelector('#scores-list');
+  boardlist.innerHTML = '';
+
+  for (let i = 0; i < data.length; i += 1) {
+    const scoreItem = document.createElement('li');
+    scoreItem.classList.add('score-item');
+
+    const name = document.createElement('p');
+    const score = document.createElement('p');
+
+    name.classList.add('name');
+    score.classList.add('score-list');
+
+    name.textContent = `${data[i].user} :`;
+    score.textContent = `${data[i].score}`;
+
+    scoreItem.appendChild(name);
+    scoreItem.appendChild(score);
+
+    boardlist.appendChild(scoreItem);
+  }
 };
 
-module.exports = itemScore;
+export default itemScore;
